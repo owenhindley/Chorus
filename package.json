@@ -1,0 +1,11 @@
+{
+  "name": "chorus-dev",
+  "version": "1.0.0",
+  "description": "System for synchronised audio playback across the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Owen Hindley / Huldufugl",
+  "license": "ISC"
+}
