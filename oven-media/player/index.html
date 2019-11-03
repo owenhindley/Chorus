@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OMAM player</title>
+  <meta name="description" content="OMAM player">
+  <meta name="author" content="Owen Hindley / Huldufugl">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <script src="js/ovenplayer/ovenplayer.js"></script>
+
+ 
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(){
+
+            let webrtcSources = OvenPlayer.generateWebrtcUrls([
+                {
+                        host : 'ws://34.245.125.98:3333',
+                        application : 'app',
+                        stream : "omam_o",
+                        label : "WebRTC 1080P"
+                }
+            ]);
+
+            let player = OvenPlayer.create("player_id", {
+                sources: webrtcSources
+            });
+
+        });
+    
+    
+    </script>
+
+</head>
+<body>
+    <div id="player_id"></div>
+</body>
+</html>

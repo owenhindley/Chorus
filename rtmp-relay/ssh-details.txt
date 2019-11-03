@@ -1,0 +1,1 @@
+ssh -i "omam-key.pem" ubuntu@ec2-63-35-194-137.eu-west-1.compute.amazonaws.com

@@ -1,0 +1,4 @@
+ssh -i "omam-key.pem" ubuntu@34.245.125.98
+
+$ (curl -LOJ https://github.com/AirenSoft/OvenMediaEngine/archive/v0.9.1.tar.gz && tar xvfz OvenMediaEngine-0.9.1.tar.gz)
+$ OvenMediaEngine-0.9.1/misc/prerequisites.sh
