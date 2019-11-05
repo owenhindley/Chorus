@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OMAM player</title>
+  <meta name="description" content="OMAM player">
+  <meta name="author" content="Owen Hindley / Huldufugl">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(){
+            var playAlligator = document.getElementById("playAlligator");
+            var playAmbient = document.getElementById("playAmbient");
+            var stopButton = document.getElementById("stop");
+
+            var audioAlligator = document.getElementById("audioAlligator");
+            var audioAmbient = document.getElementById("audioAmbient");
+
+            playAlligator.addEventListener("click", function(){
+                audioAmbient.pause();
+                audioAlligator.load();
+                audioAlligator.play();
+            });
+
+            playAmbient.addEventListener("click", function(){
+                audioAlligator.pause();
+                audioAmbient.load();
+                audioAmbient.play();
+            });
+
+            stopButton.addEventListener("click", function(){
+                audioAlligator.pause();
+                audioAmbient.pause();
+            });
+        });
+    
+    
+    </script>
+
+    <style>
+        html {
+            font-family: "Raleway", Arial, Helvetica, sans-serif;
+        }
+        button {
+            width: 33%;
+            height:20vh;
+            font-size: 1rem;
+            border:1px solid black;
+            text-transform: uppercase;
+        }
+
+        button#playAlligator {
+            background: green;
+            color:white;
+        }
+
+        button#playAmbient {
+            background: blue;
+            color:white;
+        }
+
+        button#stop {
+            background: red;
+            color:white;
+        }
+    
+        audio {
+            margin-top:10px;
+            width: 40%;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="playAlligator">Play Alligator</button>
+    <button id="playAmbient">Play Ambient</button>
+    <button id="stop">Stop</button>
+    <audio id="audioAlligator" src="audio/alligator.mp3" preload controls="false"></audio>
+    <audio id="audioAmbient" src="audio/WaitingForSnowStretched-LQ.mp3" preload controls="false"></audio>
+    
+</body>
+</html>
